@@ -1,9 +1,3 @@
-/*
-MINI PROJECT PT.DIKA - 2024
-SOAL BUAT SEBUAH DYNAMIC FORM DENGAN DIBERIKAN
-DATA KONFIGURASI DI "form, setForm" JIKA TYPE
-TEXT MAKA KELUAR INPUT TYPE JIKA SELECT KELUAR INPUT SELECT
-*/
 import React, { useState, useEffect } from 'react';
 
 const DynamicFormBuilder = () => {
