@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Navigate, Outlet } from 'react-router-dom';
 import { AccountBox } from '../views/Home/index';
-import Login from '../views/Login/index';
+import { LoginForm } from '../views/Login/index';
 import { SignupForm } from '../views/Register/index';
 import Product from '../views/Product/index';
 import Notfound from '../views/NotFound/index';
@@ -24,8 +24,8 @@ const Router = () => {
                     <Route index element={<AccountBox />} />
                 </Route>
                 <Route path="/login">
-                    <Route index element={<Login />} />
-                    <Route path="/login/:id" element={<Login />} />
+                    <Route index element={<LoginForm />} />
+                    <Route path="/login/:id" element={<LoginForm />} />
                 </Route>
                 <Route path="/product">
                     <Route index element={<Product />} />

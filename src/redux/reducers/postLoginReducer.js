@@ -2,30 +2,22 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const addUsersAction = createAsyncThunk(
-    "Users/postUsers",
+    "Users/postLogin",
     async ({ data, saveImg }, { rejectWithValue }) => {
         try {
             if (
                 data.username === "" ||
-                data.password === "" 
+                data.password === ""
             ) {
                 return rejectWithValue("Input is empty");
             }
-            // const userData = {
-            //     id: data.id,
-            //     username: data.username,
-            //     password: data.password,
-            //     level: data.level,
-            //     image: saveImg
-            // };
-
 
             const formData = new FormData();
             formData.append("id", data.id);
             formData.append("username", data.username);
             formData.append("password", data.password);
 
-            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, formData);
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, formData);
 
         } catch (error) {
             return rejectWithValue("Add User error");
@@ -35,7 +27,7 @@ export const addUsersAction = createAsyncThunk(
 
 
 const addUsersSlice = createSlice({
-    name: "postUsers",
+    name: "postLogin",
     initialState: {
         isLoading: false,
         isError: false,

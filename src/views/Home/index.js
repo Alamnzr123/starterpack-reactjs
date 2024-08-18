@@ -98,7 +98,7 @@
 
 import React, { useState } from "react";
 import styled from "styled-components";
-import Login from "../Login/index";
+import { LoginForm } from "../Login/index";
 import { motion } from "framer-motion";
 import { AccountContext } from "../../Component/AccountContext";
 import { SignupForm } from "../Register/index";
@@ -248,7 +248,7 @@ export function AccountBox(props) {
                     )}
                 </TopContainer>
                 <InnerContainer>
-                    {active === "signin" && <Login />}
+                    {active === "signin" && <LoginForm />}
                     {active === "signup" && <SignupForm />}
                 </InnerContainer>
             </BoxContainer>

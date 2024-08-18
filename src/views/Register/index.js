@@ -7,17 +7,22 @@ import {
     MutedLink,
     SubmitButton,
 } from "../../Component/Common";
+import { useDispatch } from 'react-redux';
+import {
+    addUsersAction
+} from '../../redux/reducers/postUserReducer';
 import { Marginer } from "../../Marginer/index";
 import { AccountContext } from "../../Component/AccountContext";
 
 export function SignupForm(props) {
-    const { switchToSignin } = useContext(AccountContext);
+    const dispatch = useDispatch();
+
+    // const { switchToSignin } = useContext(AccountContext);
 
     return (
         <BoxContainer>
-            <FormContainer>
-                <Input type="text" placeholder="Full Name" />
-                <Input type="email" placeholder="Email" />
+            <FormContainer onClickCapture={() => dispatch(addUsersAction())}>
+                <Input type="email" placeholder="Username" />
                 <Input type="password" placeholder="Password" />
                 <Input type="password" placeholder="Confirm Password" />
             </FormContainer>
@@ -26,7 +31,8 @@ export function SignupForm(props) {
             <Marginer direction="vertical" margin="1em" />
             <MutedLink href="#">
                 Already have an account?
-                <BoldLink href="#" onClick={switchToSignin}>
+                {/* <BoldLink href="#" onClick={switchToSignin}> */}
+                <BoldLink href="#">
                     Signin
                 </BoldLink>
             </MutedLink>
