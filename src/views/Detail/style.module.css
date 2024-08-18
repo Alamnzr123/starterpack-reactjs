@@ -1,0 +1,166 @@
+.menu {
+    background-color: red;
+}
+
+.header {
+    background-color: green;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    height: 100vh;
+    background-color: #FFF5EC;
+    width: 80%;
+}
+
+.decoration {
+    height: 100vh;
+    background-color: #efc81a;
+    width: 20%;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+}
+
+.navbar .primary-menu {
+    width: 80%;
+}
+
+.navbar .primary-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .primary-menu li {
+    padding: 10px 30px;
+}
+
+.navbar .primary-menu li a {
+    text-decoration: none;
+    color: #2E266F;
+}
+
+.navbar .secondary-menu {
+    width: 20%;
+}
+
+.navbar .secondary-menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar .secondary-menu ul li {
+    padding: 10px 285px;
+}
+
+.navbar .secondary-menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .secondary-menu ul li .login {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .secondary-menu ul li .login .icon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.decoration img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    right: 100px;
+}
+
+.content .jumbotron {
+    position: absolute;
+    top: 240px;
+    left: 100px;
+}
+
+.content .jumbotron h1 {
+    font-size: 40px;
+    width: 52%;
+    color: #2E266F;
+    font-family: airbnb;
+
+}
+
+.content .jumbotron .form-group {
+    display: flex;
+    height: 50px;
+    width: 500px;
+    background-color: white;
+}
+
+.content .jumbotron .form-group .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.content .jumbotron .form-group input {
+    width: 100%;
+    border: none;
+}
+
+.content .jumbotron .form-group input:focus {
+    outline: none;
+    border: none;
+}
+
+@media screen and (max-width: 840px) {
+    .content .jumbotron h1 {
+        font-size: 12pt;
+
+    }
+
+    .container .navbar .secondary-menu {
+        width: 30%;
+
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .content .jumbotron h1 {
+        font-size: 8pt;
+
+    }
+
+    .container .navbar .secondary-menu {
+        width: 10%;
+
+    }
+
+    .decoration img {
+        height: 20%;
+        width: 20%;
+    }
+
+}
